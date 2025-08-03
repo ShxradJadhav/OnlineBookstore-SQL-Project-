@@ -2,7 +2,7 @@
 CREATE DATABASE OnlineBookstore;
 
 -- Switch to the database
- OnlineBookstore;
+c\ OnlineBookstore;
 
 -- Create Tables
 DROP TABLE IF EXISTS Books;
@@ -194,6 +194,7 @@ SELECT b.book_id, b.title, b.stock, COALESCE(SUM(o.quantity),0) AS Order_quantit
 FROM books b
 LEFT JOIN orders o ON b.book_id=o.book_id
 GROUP BY b.book_id ORDER BY b.book_id;
+
 
 
 
